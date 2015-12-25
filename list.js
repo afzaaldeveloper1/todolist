@@ -2,8 +2,8 @@
  $('#ToDoInput').keypress(function (e) {
         if (e.keyCode == 13) {
           var name = $('#nameInput').val();
-          var text = $('#ToDoInput').val();
-          myDataRef.set('User ' + name + ' says ' + text);
+          var todo = $('#ToDoInput').val();
+          myDataRef.push({name: name, todo: todo});
           $('#ToDoInput').val('');
         }
       });
